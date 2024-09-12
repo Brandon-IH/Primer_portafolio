@@ -1,0 +1,353 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+.index{
+    background-color: #001524;
+    overflow: hidden;
+    height: 100vh; /* Hace que el body ocupe el 100% de la altura de la ventana */
+        /* Elimina los márgenes para evitar espacio extra */    
+}
+
+.body_about{
+    background-color: #001524;
+    height: 100vh; /* Hace que el body ocupe el 100% de la altura de la ventana */
+        /* Elimina los márgenes para evitar espacio extra */
+    overflow: hidden; 
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-right: 15px; /* Ajusta el valor según el grosor de la barra de desplazamiento */
+  }
+  
+  /* Ocultar la barra de desplazamiento en Webkit (Chrome, Safari) */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ocultar la barra de desplazamiento en Firefox */
+  .scroll-container {
+    scrollbar-width: none;
+  }
+
+
+
+/* Barra de navegación */
+.list_menu {
+    display: flex; /* Utiliza Flexbox para alinear los elementos hijos en una fila */
+    justify-content: space-between; /* Distribuye el espacio disponible entre los elementos hijos */
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro */
+    padding: 20px; /* Añade un relleno interno de 20px alrededor del contenido */
+    position: relative; /* Permite la colocación de elementos absolutamente posicionados dentro de este contenedor */
+}
+
+.list_menu::after {
+    content: ""; /* Crea un pseudo-elemento vacío después del contenido de .list_menu */
+    position: absolute; /* Posiciona el pseudo-elemento de manera absoluta respecto a .list_menu */
+    bottom: 0; /* Coloca el pseudo-elemento en la parte inferior del contenedor */
+    left: 0; /* Alinea el pseudo-elemento al borde izquierdo del contenedor */
+    width: 100%; /* Hace que el pseudo-elemento tenga el mismo ancho que el contenedor */
+    height: 4px; /* Establece la altura del pseudo-elemento en 4px */
+    background: linear-gradient(to right, yellow, transparent); /* Aplica un degradado lineal que va de amarillo a transparente */
+}
+
+.menu-options {
+    list-style: none; /* Quita los puntos de las listas no ordenadas */
+    display: flex; /* Utiliza Flexbox para alinear los elementos en una fila  leandro Andriani */ 
+}
+
+.menu-options li {
+    margin-left: 30px; /* Añade un margen de 30px a la izquierda de cada elemento de la lista */
+}
+
+.menu-options a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #edf2f4; /* Establece el color del texto de los enlaces */
+    font-size: 20px; /* Establece el tamaño de fuente en 20px */
+    font-family: 'Montserrat', sans-serif; /* Define la fuente del texto usando Montserrat, con una fuente sans-serif alternativa */
+}
+
+.menu-options a:hover {
+    color: yellow; /* Cambia el color del texto de los enlaces a amarillo al pasar el mouse por encima */
+}
+
+/* Imagen de perfil */
+.img-perfil {
+    margin-right: 50px;
+}
+.Brandon {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    border-radius: 50%;
+    filter: drop-shadow();
+    transition: transform 0.5s ease, opacity 0.5s ease;   
+}
+.Brandon:hover {
+    transform: scale(1.2); /* Agranda la imagen al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad al pasar el mouse */
+}
+.Mis_datos_img{
+    width: 30%;
+    border-radius: 50%;
+}
+/* Contenedores y texto principal */
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10%;
+}
+.contenedor_principal {
+    display: flex;
+    justify-content: right;
+}
+.contenedor_yo {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.contenido {
+    width: 600px;
+}
+.me {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-top: 5%;
+}
+.Hi {
+    font-family: 'Montserrat', sans-serif;
+    color: yellow;
+    font-size: 50px;
+}
+.cont{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    /* border: 2px solid black; Grosor, estilo y color del borde */
+    
+}
+.cont_title{
+    display: flex;
+    justify-content: center;
+}
+.title_about{
+    font-size: 250%;
+    font-family: 'Montserrat', sans-serif;
+}
+.cont_descript{
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-block-end: 2%;
+}
+.cont_datos{
+    display: flex;
+    padding: 20px;
+    position: relative;
+    justify-content:space-evenly;
+    background-color: #001b2e;
+    border-radius: 10px;
+    /* border: 2px solid black; Grosor, estilo y color del borde */
+
+}
+.Cont_about{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    margin-top: 2%;
+    text-align: left; /* Alinea el texto al centro */
+    /* border: 2px solid black; Grosor, estilo y color del borde */
+    font-family: 'Montserrat', sans-serif;
+}
+.datos{
+    list-style: none;
+    font-size: 20px;
+    margin: 10% 0; /* Espacio entre los elementos de la lista */
+}
+.descript{
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Cont_skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+    /* border: 2px solid black; Grosor, estilo y color del borde */
+    font-family: 'Montserrat', sans-serif;
+}
+.SKILLS{
+    width: 100%;
+    display: block;
+    align-items: left;
+    padding: 50px;
+    margin:auto;
+}
+.contenedor_contact{
+    border: 2px solid black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Animación del logo */
+.bm .Logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.contacto{
+    padding: 10px;
+}
+.redes_sociales{
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+.img_redes{
+    margin-left: 30px;
+    filter: drop-shadow();
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.img_redes:hover{
+    transform: scale(1.2); /* Agranda la imagen al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad al pasar el mouse */
+}
+.gmail{
+    color: white;   
+}
+.gmail:hover{
+    color: yellow;
+}
+.bm:hover .Logo {
+    transform: scale(1.2); /* Agranda la imagen al pasar el mouse */
+    opacity: 0.8; /* Reduce la opacidad al pasar el mouse */
+}
+/* Formato de barras de progreso */
+progress {
+    display: flex;
+    width: 480px;
+    height: 30px;
+    margin-bottom: 10px; /* Espacio entre barras */
+}
+progress::-webkit-progress-bar {
+    background-color: #aa2b2b; /* Fondo de la barra */
+    border-radius: 5px;
+}
+progress::-webkit-progress-value {
+    background-color: #0f1610; /* Color de la barra de progreso */
+    border-radius: 5px;
+}
+progress::-moz-progress-bar {
+    background-color: #4caf50; /* Firefox */
+}
+/* Estilos para las etiquetas */
+label {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: block; /* Para que las etiquetas estén arriba de las barras */
+}
+li{
+    margin: 20px;
+}
+.button_save{
+    padding: 16px 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button_save:hover {
+    background-color: #45a049;
+}
+.button:active {
+    background-color: #3e8e41;
+}
+#footer{
+    background-color: black;
+    color: white;
+
+}
+
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+    .index{
+        overflow-x: hidden;
+    }
+    .body_about{
+        overflow-x: hidden;
+    }
+    
+    .list_menu {
+        display: flex;
+        justify-content:space-between;
+        align-items: end;
+        padding: 5%;
+        position: relative;
+        width: 100%;
+    }
+    .menu-options a {
+        text-decoration: none; /* Ayuda a quitar las líneas de los links */
+        color: #edf2f4;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .Mis_datos_img {
+        width: 50%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+        align-items: center;
+    }
+    .cont_datos{
+        display: block;
+        justify-content: center;
+        border: solid 2px black; 
+    }  
+    
+    .Cont_about {
+        display: flex;
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+        
+    }
+    .cont{
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: white;
+        /* border: 2px solid black; Grosor, estilo y color del borde */
+        
+    }
+    li{
+        margin: 20px;
+    }
+    progress {
+        width: 100%; /* Ocupa el ancho completo disponible */
+        height: 25px; /* Ajusta la altura de la barra */
+    }
+
+    .img_redes {
+        width: 35px; /* Reduce el tamaño de los íconos de redes sociales */
+    }
+
+    .button_save {
+        padding: 8px 16px; /* Ajusta el tamaño del botón en pantallas pequeñas */
+    }
+
+    .Brandon {
+        width: 200px; /* Ajusta el tamaño de la imagen de perfil */
+    }
+}

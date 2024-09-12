@@ -1,0 +1,133 @@
+.index{
+    background-color: #001524;
+    overflow: hidden;
+    height: 100vh; /* Hace que el body ocupe el 100% de la altura de la ventana */
+        /* Elimina los márgenes para evitar espacio extra */    
+}
+
+.body_about{
+    background-color: #001524;
+    height: 100vh; /* Hace que el body ocupe el 100% de la altura de la ventana */
+        /* Elimina los márgenes para evitar espacio extra */
+    overflow: hidden; 
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-right: 15px; /* Ajusta el valor según el grosor de la barra de desplazamiento */
+  }
+  
+  /* Ocultar la barra de desplazamiento en Webkit (Chrome, Safari) */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ocultar la barra de desplazamiento en Firefox */
+  .scroll-container {
+    scrollbar-width: none;
+  }
+
+
+
+
+.list_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.list_menu::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, yellow, transparent); /* Degradado */
+}
+.bm .Logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.menu-options {
+    list-style: none;
+    display: flex; /* Alinear los elementos del menú en fila */ 
+}
+.menu-options li {
+    margin-left: 30px; /* Espacio entre cada opción del menú */
+}
+.menu-options a {
+    text-decoration: none; /* Ayuda a quitar las líneas de los links */
+    color: #edf2f4;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.titulo_seccion {
+    position: relative;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    color: white;
+    max-width: max-content; /* Define el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 50px; /* Agrega un poco de espacio alrededor del formulario */
+    border: 1px; /* Agrega un borde al contenedor */
+    border-radius: 5%; /* Agrega bordes redondeados al contenedor */
+    border: solid 2px yellow;
+}
+.form-group {
+    margin-bottom: 15px; /* Espacio entre cada input */
+}
+.menu-options a:hover {
+    color: yellow; /* Cambia de color al pasar el mouse por encima */
+}
+label {
+margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="Email"],
+textarea {
+     /* Utiliza la propiedad box-sizing para navegadores antiguos basados en WebKit (Safari, Chrome antiguos).
+       Esto asegura que el padding y el borde se incluyan dentro del ancho/alto del elemento. */
+    -webkit-box-sizing: border-box;
+    /* Aplica la propiedad box-sizing estándar.
+       Hace que el padding y el borde se incluyan dentro del ancho/alto del elemento, 
+       evitando que lo agranden más allá del valor especificado en "width" o "height". */
+    box-sizing: border-box;
+    /* Añade 10 píxeles de espacio interior entre el contenido del textarea y su borde. */
+    padding: 10px;
+    /* Establece que el textarea ocupe el 100% del ancho de su contenedor. */
+
+    width: 100%;
+    /* Añade un margen inferior de 10 píxeles para separar el textarea del siguiente elemento debajo de él. */
+
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    /* Coloca estilos a tu botón */
+    width: 100%;  /* para llenar la totalidad del contenedor */
+    padding: 5px; /*Para poner el boton mas gordito */
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+
+}
+button:hover {
+    background-color: yellow;
+}
+    
